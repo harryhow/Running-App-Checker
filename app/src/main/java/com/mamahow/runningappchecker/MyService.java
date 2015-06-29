@@ -63,7 +63,7 @@ public class MyService extends Service{
 
                 // invoke intent
                 // TODO: change package name for your own app
-                Intent intent = getPackageManager().getLaunchIntentForPackage("com.mamahow.helloandroidstudio");
+                Intent intent = getPackageManager().getLaunchIntentForPackage("com.tiggly.tales");
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_SINGLE_TOP);
                 startActivity(intent);
                 Log.i(TAG, "App is NOT running, bring back my app again (" + count + ")");
@@ -72,7 +72,7 @@ public class MyService extends Service{
             }
             // delay
             try {
-                Thread.sleep(1000);
+                Thread.sleep(15000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -91,7 +91,7 @@ public class MyService extends Service{
         for (int i=0; i<services.size(); i++){
             //Log.i(TAG, "Name:" + services.get(i).processName.toString());
             // TODO: change package name for your own app
-            if (services.get(i).processName.toString().equalsIgnoreCase("com.mamahow.helloandroidstudio")) {
+            if (services.get(i).processName.toString().equalsIgnoreCase("com.tiggly.tales")) {
                 //Log.i(TAG, "found my app!");
                 if (services.get(i).importance == ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND){
                     //Log.i(TAG, "App is on foreground, good!");
@@ -99,7 +99,7 @@ public class MyService extends Service{
 
                     // delay
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(15000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
