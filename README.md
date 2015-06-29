@@ -11,3 +11,5 @@ You have to change package name for your own app, please check TODO
             }
 ```
 
+## Test Platform
+1. Android 4.4.2 (Asus Zenfone 5)
